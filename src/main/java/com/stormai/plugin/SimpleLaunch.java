@@ -40,7 +40,7 @@ public class SimpleLaunch extends JavaPlugin implements Listener {
         if (from.getBlockX() != to.getBlockX() || from.getBlockY() != to.getBlockY() || from.getBlockZ() != to.getBlockZ()) {
             // Check if the block below the player is a Gold Pressure Plate
             Location below = to.clone().subtract(0, 1, 0);
-            if (below.getBlock().getType() == Material.GOLD_PRESSURE_PLATE) {
+            if (below.getBlock().getType() == Material.LIGHT_WEIGHTED_PRESSURE_PLATE) {
                 launchPlayer(player, below);
             }
         }
@@ -62,7 +62,7 @@ public class SimpleLaunch extends JavaPlugin implements Listener {
         player.setVelocity(velocity);
 
         // Play Firework Blast sound
-        player.playSound(player.getLocation(), Sound.BLOCK_FIREWORK_ROCKET_BLAST, SoundCategory.PLAYER, 1.0f, 1.0f);
+        player.playSound(player.getLocation(), Sound.ENTITY_FIREWORK_ROCKET_BLAST, SoundCategory.PLAYERS, 1.0f, 1.0f);
 
         // Spawn Cloud particles at player's feet
         player.spawnParticle(Particle.CLOUD, launchLocation, 50, 0.5, 0.5, 0.5, 0.1);
