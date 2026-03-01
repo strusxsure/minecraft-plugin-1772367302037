@@ -5,3 +5,19 @@ api-version: 1.21
 authors: [ StormAI ]
 description: A simple plugin that launches players when they step on Gold Pressure Plates
 website: https://github.com/yourusername/SimpleLaunch
+commands:
+  launch:
+    description: Control your SimpleLaunch settings
+    usage: /launch [toggle|height <value>|distance <value>|status]
+    aliases: [sl]
+  launchreload:
+    description: Reload the SimpleLaunch plugin
+    usage: /launchreload
+    permission: simplelaunch.reload
+permissions:
+  simplelaunch.reload:
+    description: Allows reloading the plugin
+    default: op
+  simplelaunch.bypass:
+    description: Bypass all restrictions
+    default: false

@@ -7,6 +7,10 @@ A simple Minecraft plugin for Paper 1.21 that launches players when they step on
 - Spawns "Cloud" particles at player's feet during launch
 - Prevents fall damage for 5 seconds after being launched
 - Uses modern Paper API 1.21 and Java 21
+- **NEW COMMANDS**: `/launch` command with toggle, height, distance, and status options
+- Cooldown system to prevent spam launching
+- Individual player settings for launch height and distance
+- Permission-based command access
 
 ## Installation
 
@@ -17,15 +21,27 @@ A simple Minecraft plugin for Paper 1.21 that launches players when they step on
 
 ## Usage
 
+### Basic Usage
 Simply place Gold Pressure Plates on your server. When players step on them, they will be launched according to the configured parameters.
+
+### Commands
+
+**/launch** - Control your SimpleLaunch settings
+- `/launch toggle` - Enable/disable launch for yourself
+- `/launch height <value>` - Set launch height (1-10, default: 2)
+- `/launch distance <value>` - Set launch distance (1-20, default: 5)
+- `/launch status` - Show your current settings
+
+**/launchreload** - Reload the plugin (requires `simplelaunch.reload` permission)
+
+### Permissions
+
+- `simplelaunch.reload` - Allows reloading the plugin (default: op)
+- `simplelaunch.bypass` - Bypass all restrictions (default: false)
 
 ## Configuration
 
-This plugin doesn't require any configuration files. All settings are hardcoded in the plugin.
-
-## Permissions
-
-No special permissions are required. All players can use the launch feature.
+This plugin doesn't require any configuration files. All settings are stored per-player and can be modified using the `/launch` command.
 
 ## Building from Source
 
