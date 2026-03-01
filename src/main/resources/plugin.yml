@@ -1,0 +1,7 @@
+name: SimpleLaunch
+version: 1.0
+main: com.stormai.plugin.SimpleLaunch
+api-version: 1.21
+authors: [ StormAI ]
+description: A simple plugin that launches players when they step on Gold Pressure Plates
+website: https://github.com/yourusername/SimpleLaunch
