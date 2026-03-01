@@ -71,8 +71,8 @@ public class SimpleLaunch extends JavaPlugin implements Listener {
         long noFallDamageUntilTime = System.currentTimeMillis() + 5000;
         noFallDamageUntil.put(player.getUniqueId(), noFallDamageUntilTime);
 
-        // Apply resistance effect to prevent fall damage (alternative method)
-        player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100, 4, true, false), true);
+        // Apply resistance effect to prevent fall damage (updated to correct PotionEffectType)
+        player.addPotionEffect(new PotionEffect(PotionEffectType.RESISTANCE, 100, 4, true, false), true);
     }
 
     public boolean shouldTakeFallDamage(Player player) {
